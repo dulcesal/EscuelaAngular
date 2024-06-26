@@ -1,0 +1,63 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-link">
+                <a class="btn-block btn-login" href="home()">HOME</a>
+            </li>
+            <li class="nav-link">
+                <a class="btn-block btn-login" href="registro()">Registro</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Login Primaria</h2>
+                <form class="login-form">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="exampleInputPassword1">
+                    </div>
+
+
+                </form>
+                <div class="mb-3 form-check d-flex justify-content-center">
+                    <button type="submit" class="btn-login" [disabled]="email == '' || password == ''"
+                        (click)="login()">Enviar</button>
+                </div>
+
+            </div>
+            <div class="col-md-8 banner-sec">
+                <div class="carousel-inner" role="listbox">
+
+                    <img class="d-block img-fluid"
+                        src="https://www.elsoldepuebla.com.mx/incoming/hefgit-benito-juarez-ilustrativa.jpg/ALTERNATES/LANDSCAPE_960/benito%20juarez-ilustrativa.jpg"
+                        alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <h2>Primaria Benito Juarez</h2>
+                        <p> Institución docente educativa para la formación primaria de los niños y niñas de la
+                            localidad.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>

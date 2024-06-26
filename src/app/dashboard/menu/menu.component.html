@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <img class="group list-group-image img-fluid"
+        src="https://i.pinimg.com/564x/f7/81/a6/f781a6461afd88469e380d0705efc74c.jpg" height="85" width="85" />
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="menu()" class="nav-link">Docente</a>
+            </li>
+            <li class="nav-item">
+                <a href="home()" class="nav-link">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<div class="container">
+    <div class="table-container">
+        <div class="table-wrapper">
+            <h2 class="title">Asignación de Materias</h2>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Agregar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let materia of materias">
+                        <td> {{materia.nombre}}</td>
+                        <td class="text-center">
+                            <button class="btn-primary btn m-auto"
+                                (click)="addMateria(materia.id_materia)">agregar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <h2 class="title">Horarios Maestros</h2>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Horas</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let hora of horas">
+                        <td> {{hora.hora}}</td>
+                        <td>{{viewmateria("Lunes",hora.hora)}}</td>
+                        <td>{{viewmateria("Martes",hora.hora)}}</td>
+                        <td>{{viewmateria("Miercoles",hora.hora)}}</td>
+                        <td>{{viewmateria("Jueves",hora.hora)}}</td>
+                        <td>{{viewmateria("Viernes",hora.hora)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

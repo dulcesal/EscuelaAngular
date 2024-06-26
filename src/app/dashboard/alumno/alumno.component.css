@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.title2 {
+    text-align: center;
+    color: #000000;
+
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 24px;
+
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    background-color: #48A3A7;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table-wrapper {
+    flex: 1;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #e6f0ff;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f0f8ff;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #48A3A7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #48A3A7;
+}
+
+.navbar {
+    background: #48A3A7;
+    padding: 10px;
+}
+
+.navbar img {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #0a06e2;
+    transition: 0.2s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
